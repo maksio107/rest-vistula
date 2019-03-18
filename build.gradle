@@ -1,0 +1,32 @@
+plugins {
+    id 'java'
+}
+
+group 'com.roslonek'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    //rest client to perform HTTP calls
+    testCompile group: 'io.rest-assured', name: 'rest-assured', version: '3.1.0'
+
+    //standard java test runner
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+
+    //logging
+    testCompile group: 'org.slf4j', name: 'slf4j-simple', version: '1.7.25'
+
+    //common http components library
+    testCompile group: 'org.apache.httpcomponents', name: 'httpclient', version: '4.5.6'
+
+    //JSON-to-POJO binding
+    testCompile group: 'com.fasterxml.jackson.core', name: 'jackson-databind', version: '2.9.6'
+
+    //async event pooling library
+    testCompile group: 'org.awaitility', name: 'awaitility', version: '3.0.0'
+}
